@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>ButterflyNet Name Validator</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>ButterflyNet Name Validator :: Results</h1>
+            </div>
+            <div id="content">
+			<p>
+			<table border="1" >
+			<tr>
+			{% for key, value in results[0].iteritems() %}
+				<th><b> {{ key }} </b></th>
+			{% endfor %}
+			</tr>
+			{% for name in results %}
+				<tr>
+				{% for key, value in name.iteritems() %}
+						<td> {{ value }} </td>
+				{% endfor %}
+				</tr>
+			{% endfor %}
+			</table>
+            </div>
+			<a href="{{ url_for('save') }}">Save to CSV</a>
+            </div>
+		<p>
+    	<p>
+    	<a href="/">Home</a>
+        </div>
+    </body>
+</html>
