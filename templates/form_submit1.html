@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>ButterflyNet Name Validator</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Input butterfly name list: </h1>
+            </div>
+            <div id="content">
+                <form method="post" action="{{ url_for('hello') }}">
+				<p>
+                  <label for="yourname">Enter your list:</label>
+                  <input type="text" name="yourlist" size="80" /><br />
+                  <input type="submit" />
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+ 
